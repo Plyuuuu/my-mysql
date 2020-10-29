@@ -1,8 +1,0 @@
-#查询存储引擎
-#show engines;
-
-#查询默认存储引擎
-#show VARIABLES LIKE '%storage_engine%'
-
-#查询表的存储引擎
-show table status like 'employees';

@@ -1,5 +1,8 @@
-#进阶1：基础查询
+
 /*
+进阶1：基础查询
+
+
 语法：
 select 查询列表 from 表名;
 
@@ -23,7 +26,7 @@ SELECT last_name,salary,email FROM employees;
 
 #3.查询表中的所有字段
 
-#方式一：
+/*方式一：*/
 SELECT
     `employee_id`,
     `first_name`,
