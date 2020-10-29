@@ -1,5 +1,6 @@
-#进阶2：条件查询
+
 /*
+#进阶2：条件查询
 
 语法：
 	select
@@ -31,29 +32,29 @@
 		is null
 
 */
-#一、按条件表达式筛选
+/*一、按条件表达式筛选*/
 
-    #案例1：查询工资>12000的员工信息
+    /*#案例1：查询工资>12000的员工信息*/
     use myemployees;
 
     select *
     from employees
     where salary>12000;
 
-    #案例2：查询部门编号不等于90号的员工名和部门编号
+   /* #案例2：查询部门编号不等于90号的员工名和部门编号*/
     select first_name,department_id
     from employees
     where department_id != 90;
 
-#二、按逻辑表达式筛选
+/*#二、按逻辑表达式筛选
 
-    #案例1：查询工资z在10000到20000之间的员工名、工资以及奖金
+    #案例1：查询工资z在10000到20000之间的员工名、工资以及奖金*/
 
         select first_name,salary,commission_pct
         from employees
         where salary>=10000 and salary <= 20000;
 
-    #案例2：查询部门编号不是在90到110之间，或者工资高于15000的员工信息
+    /*#案例2：查询部门编号不是在90到110之间，或者工资高于15000的员工信息*/
         SELECT
             *
         FROM
@@ -62,7 +63,7 @@
             NOT(department_id>=90 AND  department_id<=110) OR salary>15000;
 
 
-#三、模糊查询
+/*#三、模糊查询*/
 /*
     like
 
@@ -72,7 +73,7 @@
 
 */
 
-#1.like
+/*#1.like*/
     /*
     特点：
     ①一般和通配符搭配使用
@@ -81,18 +82,18 @@
         _ 任意单个字符
     */
 
-    #案例1：查询员工名中包含字符a的员工信息
+    /*#案例1：查询员工名中包含字符a的员工信息*/
         select *
         from employees
         where first_name like '%a%';
 
-    #案例2：查询员工名中第三个字符为e，第五个字符为l的员工名和工资
+   /* #案例2：查询员工名中第三个字符为e，第五个字符为l的员工名和工资*/
 
         select first_name,salary
         from employees
         where first_name like '__e_l%';
 
-    #案例3：查询员工名中第二个字符为_的员工名
+   /* #案例3：查询员工名中第二个字符为_的员工名*/
 
         select last_name
         from employees
@@ -105,7 +106,7 @@
     ③两个临界值不要调换顺序
 
     */
-    #案例1：查询员工编号在100到120之间的员工信息
+    #案例1:查询员工编号在100到120之间的员工信息
 
         select *
         from employees
