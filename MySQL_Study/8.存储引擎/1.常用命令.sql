@@ -22,6 +22,3 @@ use girls;
 
 show table status like 'admin';
 
-
-
-
